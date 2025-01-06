@@ -1,0 +1,162 @@
+html {
+    height: 100%;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	background-color: white;
+	margin: 0px;
+	width: 100%;
+	min-height: 100%;
+}
+
+header {
+    display: inline-block;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 20%;
+    padding-top:5%;
+    padding-left:5%;
+    background-color: white;
+    height:100%;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+#navbar {
+    text-align: left;
+    font-size: 1.5em;
+    border-right: 1px solid gray;
+}
+#navbar a {
+	color: gray;
+	text-decoration: none;
+}
+#navbar a:visited {
+	color: gray;
+	text-decoration: none;
+}
+#navbar a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+ul{
+    padding-left: 0%;
+}
+
+.nav2 {
+    margin-left: 2%;
+    padding-left: 4%;
+    font-size: 0.8em;
+    border-left: solid 1px gray;
+    display: none;
+}
+
+#content {
+    background-color: white;
+    margin-left: 30%;
+    marging-top:0px;
+    padding-top: 3%;
+}
+
+
+a {
+	color: black;
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: gray;
+	text-decoration: none;
+}
+
+.button, #export{
+    cursor: pointer; 
+}
+
+form {
+    width: 50%;
+}
+
+input {
+    padding: 2px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    outline: none; /* Retire les bordures appliquées par certains navigateurs (Chrome notamment) lors du focus des éléments <input> */	
+}
+
+input:focus {
+    border-color: rgba(82, 168, 236, 0.75);
+    -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+    -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+    box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+
+textarea:focus {
+    border-color: rgba(82, 168, 236, 0.75);
+    -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+    -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+    box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+
+.incorrect {
+    border-color: rgba(191, 68, 68, 0.75);
+}
+
+.incorrect:focus {
+    border-color: rgba(191, 68, 68, 0.75);
+    -moz-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+    -webkit-box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+    box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+}
+
+input[type='text'], input[type='email'], input[type='password'], textarea, select, option {
+  width : 60%;
+  margin-right: 0;
+  -webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
+     -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
+          box-sizing: border-box;
+}
+
+input[type='submit'] {
+    margin-right:0px;
+}
+
+label {
+	width: 150px;
+}
+
+.authorInput {
+    margin-bottom: 4px;
+}
+
+h1 {
+    color: rgb(200,0,0);
+}
+
+/* Suggestions */
+form datalist option{
+    cursor: default;
+    width : 60%;
+    margin-right: 0;
+}
+
+
+/* dewey */
+.n1 {
+    font-weight: bold;
+}
+.n2 {
+    font-style: italic;
+    margin-left: 5%;
+}
+.n3 {
+    margin-left: 10%;
+}
