@@ -2,7 +2,8 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8" />
-        <link rel="stylesheet" href="/static/css/volumes.css" />
+        	<link rel="stylesheet" href="/static/css/volumes.css" />
+        	<link rel="icon" type="image/x-icon" href="/static/icones/favicon.ico">
 		<title>Volumes</title>
 	</head>
 
