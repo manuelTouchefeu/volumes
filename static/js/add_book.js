@@ -121,6 +121,7 @@ suggest('series', 'suggestSeries', 'series');
 var quickAdd = document.getElementById('googleBooks');
 quickAdd.addEventListener('click', function(){
     var isbn = document.querySelector('#isbn');
+    isbn.value = isbn.value.replaceAll("-", "");
     console.log(isbn.value);
      if (isbn.value.length != 0 && isbn.value.length != 13 && isbn.value.length != 10) {
         isbn.className = 'incorrect';
@@ -134,6 +135,7 @@ quickAdd.addEventListener('click', function(){
     xhr.addEventListener('readystatechange', function() {
         if (xhr.readyState === xhr.DONE) {
             var response = JSON.parse(xhr.responseText);
+            console.log(xhr.responseText);
             document.getElementById("title").value = response['items'][0]['volumeInfo'].title;
             document.getElementById("description").value = response['items'][0]['volumeInfo'].description;
             document.getElementById("date").value = response['items'][0]['volumeInfo'].publishedDate;
@@ -154,6 +156,7 @@ quickAdd.addEventListener('click', function(){
 
     check['isbn'] = function() {
         var isbn = document.getElementById('isbn');
+        isbn.value = isbn.value.replaceAll("-", "");
         if (isbn.value.length != 0 && isbn.value.length != 13 && isbn.value.length != 10) {
             isbn.className = 'incorrect';
             return false;
