@@ -56,8 +56,10 @@
 <br>
 
 % if book.isbn is not None:
-    <img src="/static/images/cover_{{ book.isbn }}.jpg" alt=""/>
+    <br>
+    <img class="cover" src="/static/images/cover_{{ book.isbn }}.jpg" alt="Pas de couverture disponible."/>
 % end
+
 <br>
 <p class="button" id="back">&lt&ltRetour</p>
 <p class="button" id="modif">&gt&gtModifier</p>
