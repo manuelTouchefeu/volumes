@@ -142,13 +142,16 @@ h1 {
 }
 
 /* Suggestions */
-form datalist option{
+form datalist option {
     cursor: default;
     width : 60%;
     margin-right: 0;
 }
 
-
+.cover {
+    width : 60vh;
+    height : auto;
+}
 /* dewey */
 .n1 {
     font-weight: bold;

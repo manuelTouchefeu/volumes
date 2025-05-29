@@ -30,6 +30,7 @@ github: https://github.com/manuelTouchefeu/volumes
 
 from bottle import route, run, template, static_file, error, default_app, redirect, response
 from models import *
+from get_covers import get_cover
 import json
 
 
@@ -142,12 +143,14 @@ def add():
         #    return template('add.tpl', form=form, categories=categories, book=None)
         form = check_form(request.forms)
         if form is None:
-            return template('add.tpl', form=request.forms, categories=categories, book=None)
+            return template('add.tpl', form=request.forms, categories=categories, book=None, cover=None)
         book = BookManager().add_book(form)
-        return template('add.tpl', form=request.forms, categories=categories, book=book)
+        # add cover
+        cover = get_cover(form["isbn"])
+        return template('add.tpl', form=request.forms, categories=categories, book=book, cover=cover)
 
     form = {"isbn": "", "title": "", "author": "nom, prenom", "publisher": "", "series": "", "date": "année", "description": "sur le livre", "annotation": "sur l'édition"}
-    return template('add.tpl', form=form, categories=categories, book=None)
+    return template('add.tpl', form=form, categories=categories, book=None, cover=None)
 
 
 @route('/add_ajax', method='POST')

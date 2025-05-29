@@ -37,4 +37,8 @@
     <input name="bouton" type="submit" value="Valider"/>
 </form>
 
+% if cover is not None:
+        <img class="cover" src="{{ cover }}" alt=""/>
+% end
+
 <script src="/static/js/add_book.js"></script>
