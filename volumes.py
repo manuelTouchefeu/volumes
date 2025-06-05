@@ -250,7 +250,7 @@ def error404(error):
 # favicon
 @route('/favicon.ico', method='GET')
 def get_favicon():
-    return static_file('favicon.ico', root='./static/icones')
+    return static_file('favicon.ico', root='./static/icones/')
 
 
 application = default_app()
