@@ -7,5 +7,5 @@ errorlog = 'errorlog'
 reload = True
 #keyfile = 'private.key'
 #certfile = 'certificate.crt'
-#daemon = True
+daemon = True
 #spew = True
